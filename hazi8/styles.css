@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+.container article{
+    margin: 25px 0px;
+}
+
+.highlight {
+    background-color: #F7E0C6;
+    padding: 10px 25px;
+}
+
+p {
+    line-height: 150%;
+    text-align: justify;
+}
+
+h2 {
+    color: #3e3e3e;
+    margin-top: 0;
+    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+a{
+    color:#4CB9E0;
+    text-decoration: underline;
+}
+a:hover{
+    color: #E13535;
+}
+.szoveg p span{
+    background-color: #40A622;
+    color: white;
+    padding: 0px 7px;
+}
+.szoveg-keppel img{
+    float: left;
+    margin-right: 20px;
+}
+.szoveg-keppel-jobboldalt img{
+    float: right;
+    margin-left: 20px;
+}
+.szoveg-keppel-kiemelt img{
+    float: left;
+    margin-right: 20px;
+}
+.listak ul{
+    list-style: square;
+}
+.listak li{
+    margin-bottom: 5px;
+}
+.szoveg-tobb-oszlopban-flex article {
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+}
+
+.szoveg-tobb-oszlopban-flex article p {
+    display: flex;
+    flex:1;
+}
+
+.kepgaleria-flex article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    
+
+
+.kepgaleria-flex article img{
+    width: calc(33.33% - 10px); 
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .szoveg-keppel img, .szoveg-keppel-jobboldalt img, .szoveg-keppel-kiemelt img {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 800px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .kepgaleria-flex article img {
+        width: calc(50% - 20px); 
+    }
+}
+@media (max-width: 800px) {
+    .szoveg-tobb-oszlopban-flex article {
+        flex-direction: column;
+        gap:10px;
+    }
+}
+@media (max-width:600px){
+    .kepgaleria-flex article img {
+        width: 100%;
+        gap:10px;
+    }
+}

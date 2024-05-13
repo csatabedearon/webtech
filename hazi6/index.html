@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kérdőív</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            color: #444;
+        }
+
+        .form-container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kérdőív</h1>
+
+    <form id="questionnaireForm" action="https://students.csik.sapientia.ro/~student/webtech/query.php" method="post"
+        onsubmit="return validateForm()">
+
+        <div class="question">
+            <h2>Mi a kedvenc színed?</h2>
+            <label for="color">Szín:</label>
+            <input type="text" id="color" name="color">
+
+        </div>
+
+        <div class="question">
+            <h2>Milyen élelmiszer típust kedvel?</h2>
+            <label for="food1">Pizza</label><br>
+            <input type="checkbox" id="food1" name="food" value="pizza">
+            <label for="food2">Sushi</label><br>
+            <input type="checkbox" id="food2" name="food" value="sushi">
+            <label for="food3">Burger</label><br>
+            <input type="checkbox" id="food3" name="food" value="burger">
+        </div>
+
+        <div class="question">
+            <h2>Mennyi időt tölt a naponta az interneten?</h2>
+            <label for="internetTime">Óra:</label>
+            <input type="number" id="internetTime" name="internetTime" min="0">
+
+        </div>
+
+        <div class="question">
+            <h2>Milyen típusú zenét hallgatsz?</h2>
+            <label for="musicGenre">Műfaj:</label>
+            <select id="musicGenre" name="musicGenre">
+                <option value="">Válassz</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="classical">Klasszikus</option>
+            </select>
+
+        </div>
+
+        <div class="question">
+            <h2>Van-e házi kedvenced?</h2>
+            <label for="petYes">Igen</label><br>
+            <input type="radio" id="petYes" name="pet" value="yes">
+            <label for="petNo">Nem</label><br>
+            <input type="radio" id="petNo" name="pet" value="no">
+
+        </div>
+
+        <div class="question">
+            <h2>Mennyi könyvet olvasol egy hónapban?</h2>
+            <label for="booksPerMonth">Darab: (1-20)</label>
+            <input type="range" id="booksPerMonth" name="booksPerMonth" min="0" max="20">
+
+        </div>
+
+        <div class="question">
+            <h2>Milyen gyakran sportolsz?</h2>
+            <label for="sportsFrequency">Heti hányszor:</label>
+            <input type="text" id="sportsFrequency" name="sportsFrequency">
+
+        </div>
+
+        <div class="question">
+            <h2>Milyen típusú filmeket szeretsz?</h2>
+            <label for="moviePreference">Film preferencia:</label>
+            <textarea id="moviePreference" name="moviePreference"></textarea>
+
+        </div>
+
+        <div class="question">
+            <h2>Milyen telefont használsz?</h2>
+            <label for="phone">Telefon típusa:</label>
+            <input type="text" id="phone" name="phone">
+
+        </div>
+
+        <div class="question">
+            <h2>Mennyire elégedett vagy az aktuális munkahelyeddel?</h2>
+            <label for="jobSatisfaction">Értékelés: (1-10)</label>
+            <input type="range" id="jobSatisfaction" name="jobSatisfaction" min="0" max="10">
+
+        </div>
+
+        <input type="submit" value="Küldés">
+
+    </form>
+
+    <script>
+        function validateForm() {
+            var color = document.getElementById("color").value;
+            var foodChecked = false;
+            var foods = document.getElementsByName("food");
+            for (var i = 0; i < foods.length; i++) {
+                if (foods[i].checked) {
+                    foodChecked = true;
+                    break;
+                }
+            }
+            var internetTime = document.getElementById("internetTime").value;
+            var musicGenre = document.getElementById("musicGenre").value;
+            var petChecked = false;
+            var pets = document.getElementsByName("pet");
+            for (var i = 0; i < pets.length; i++) {
+                if (pets[i].checked) {
+                    petChecked = true;
+                    break;
+                }
+            }
+            var booksPerMonth = document.getElementById("booksPerMonth").value;
+            var sportsFrequency = document.getElementById("sportsFrequency").value;
+            var moviePreference = document.getElementById("moviePreference").value;
+            var phone = document.getElementById("phone").value;
+            var jobSatisfaction = document.getElementById("jobSatisfaction").value;
+
+            if (color == "" || !foodChecked || internetTime == "" || musicGenre == "" || !petChecked || booksPerMonth == "" || sportsFrequency == "" || moviePreference == "" || phone == "" || jobSatisfaction == "") {
+                alert("Kérlek tölts ki minden kérdést a kérdőív kitöltéséhez!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

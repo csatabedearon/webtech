@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Csata-Bede Áron">
+    <title>Házi feladat 2(b)</title>
+
+    <style>
+        /* ================================================ */
+        /* Ne modósítsd */
+        /* ================================================ */
+        body,
+        html {
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table :is(td, th) {
+            padding: 7px 14px;
+            border: 1px solid #000;
+        }
+
+        footer {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes macsek {
+            0% {
+                top: 300px;
+            }
+
+            75% {
+                top: 300px;
+            }
+
+            90% {
+                top: 0;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+
+        .macsek {
+            animation: macsek 5s linear infinite alternate;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* ================================================ */
+        /* Ne modósítsd rész vége */
+        /* ================================================ */
+
+
+        /* ================================================ */
+        /* Saját rész kezdete */
+        /* ================================================ */
+        h1 {
+            font-size: 26px;
+            font-style: italic;
+            font-weight: bold;
+            color: #147d35;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #147d35;
+        }
+
+        strong,
+        em {
+            text-decoration: underline;
+        }
+
+        ol {
+            font-size: 18px;
+            line-height: 180%;
+        }
+
+        ul {
+            font-size: 16px;
+            line-height: 160%;
+        }
+
+        a:hover {
+            color: #e0a14f;
+            text-decoration: none;
+        }
+
+        a:focus {
+            color: #fff;
+            background-color: #12188a;
+        }
+
+        .arlista th {
+            background-color: #0b5c29;
+            color: #fff;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .arlista tr.paratlan {
+            background-color: #bcf5d0;
+        }
+
+        .arlista tr.paros {
+            background-color: #e4f7eb;
+        }
+
+        .arlista .euros {
+            color: #c92c1a;
+        }
+
+        .arlista td:first-child {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .arlista tr:hover {
+            background-color: #244f33;
+            color: #fff;
+        }
+
+        table:not(.arlista) th {
+            background-color: #2b7a74;
+        }
+
+        table:not(.arlista) tr:nth-child(even) {
+            background-color: #d7faf7;
+        }
+
+        table:not(.arlista) tr:nth-child(odd) {
+            background-color: #bbfaf5;
+        }
+
+        table:not(.arlista) .euros {
+            color: #db2e4e;
+        }
+
+        table:not(.arlista) tr:hover {
+            background-color: #0a9184;
+            color: #fff;
+        }
+
+        /* ================================================ */
+        /* Saját rész vége */
+        /* ================================================ */
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Házi feladat 2 (b)</h1>
+    </header>
+
+
+    <main>
+
+        <div class="feladat">
+            <h2>Feladat</h2>
+            <p>Csak CSS segítségével (HTML módosítása nélkül) old meg a következő feladatokat a HTML elemek szerkesztése
+                nélkül (csak a CSS részhez írjál (kivéve a ne modósítsd részt) + a neved töltsd ki):</p>
+            <ol>
+                <li>Az 1-es szintű címek legyenek 26px, dölt betüvel írva, köverített és #147d35 színüek</li>
+                <li>A 2-es szintű címek legyenek 24px, normál betűvel és #147d35 színüek</li>
+                <li>A paragrafusban a dölt és köverített elemek legyenek aláhúzva.</li>
+                <li>A sorszámozott lista legyen 18px és 180% sormagasságal</li>
+                <li>A sorszámozatlan lista legyen 16px és 160% sormagasságal</li>
+                <li>A weboldalon a linkek állapotai legyenek a következőek:
+                    <ul>
+                        <li>Normál: a betű színe #147d35 és aláhuzott</li>
+                        <li>Egér alatt: a betű színe #e0a14f és aláhuzás nélkül (használd a "a:hover { ... }"-t)</li>
+                        <li>Fokúsz állapotban: fehér írás és #12188a háttér</li>
+                    </ul>
+                </li>
+                <li>Első táblázat (osztályokkal ellátott és ezek mindegyikét használva):
+                    <ul>
+                        <li>Formázd meg a fejlécet, hogy a háttérszíne (background-color) #0b5c29 legyen, az írás pedig
+                            fehér színű, balra igazitva, 20px és félkövér</li>
+                        <li>A táblázat páratlan sorai legyenek #bcf5d0 háttérszínűek, a párosak pedig #e4f7eb</li>
+                        <li>Az &euro; legyen minden esetben #c92c1a színű</li>
+                        <li>A termék neve legyen kövérített és dölt betű</li>
+                        <li>Ha az egérrel egy táblázat sora felé megyünk, akkor az egész sor legyen #244f33 háttérszínű,
+                            míg az írás benne fehér színű</li>
+                    </ul>
+                </li>
+                <li>Második táblázat (ösztályok nélküli; különbségek az első táblázathoz):
+                    <ul>
+                        <li>Fejléc háttérszine: #2b7a74</li>
+                        <li>Páros sorok: #d7faf7, páratlan sorok: #bbfaf5</li>
+                        <li>&euro; szimbolum színe: #db2e4e</li>
+                        <li>Egér kurzor alatti sor háttérszíne: #0a9184</li>
+                    </ul>
+                </li>
+                <li><strong>Figyelem:</strong> a különböző elemek stílusa (beleértve a két táblázatot is) ne akadjon
+                    össze egymással</li>
+            </ol>
+        </div>
+
+        <h2>Listák</h2>
+        <ol>
+            <li>Lista elem 1</li>
+            <li>Lista elem 2</li>
+            <li>Lista elem 3</li>
+            <li>Lista elem 4</li>
+        </ol>
+        <ul>
+            <li>Lista elem 1</li>
+            <li>Lista elem 2</li>
+            <li>Lista elem 3</li>
+            <li>Lista elem 4</li>
+        </ul>
+
+
+        <h2>Paragrafusok</h2>
+        <p>Lorem ipsum dolor sit <strong>amet</strong>, cons2000ectetur adipiscing elit. Vestibulum vehicula suscipit
+            nulla. <a href="#">Quisque vitae purus auctor</a>, cursus odio nec, tempor justo. In mollis, justo ultricies
+            faucibus <em>facilisis</em>, tortor nulla viverra nulla, a vestibulum nisl nulla sit amept urna. Etiam a
+            lacus arcu. Nullam finibus convallis felis. Nunc varius sapien id velit iaculis, sed lacinia leo venenatis.
+            Nulla et tincidunt au2000gue, quis molestie eros. Quisque porttitor sagittis dolor, iaculis condimentum ex
+            varius eu. Aenean tristique semper mauris, ut interdum sapien consectetur ac. <a href="#" title="">Donec
+                vulputate</a> metus ac lacus pellentesque, eget condimentum ligula lacinia. Aliquam nec sapien tempus,
+            volutpat erat quis, sollicitudin ante. Vestibulum vitae commodo eros. Aliquam consequat erat sit amet enim
+            sollicitudin pulvinar.</p>
+
+        <p>Lorem ipsum dolor sit <strong>amet</strong>, consectetur adipiscing elit. Vestibulum vehicula suscipit nulla.
+            Quisque vitae purus auctor, cursus odio nec, tempor justo. In mollis, justo ultricies faucibus
+            <em>facilisis</em>, tortor nulla viverra nulla, a vestibulum nisl nulla sit amet urna. Etiam a lacus arcu.
+            Nullam finibus convallis felis. Nunc varius sapien id velit iaculis, sed lacinia leo venenatis. Nulla et
+            tincidunt augue, quis molestie eros. Quisque porttitor sagittis dolor, iaculis condimentum ex varius eu.
+            Aenean tristique semper mauris, ut interdum sapien consectetur ac. <a href="#" title="">Donec vulputate</a>
+            metus ac lacus pellentesque, eget condimentum ligula lacinia. Aliquam nec sapien tempus, volutpat erat quis,
+            sollicitudin ante. Vestibulum vitae commodo eros. Aliquam consequat erat sit amet enim sollicitudin
+            pulvinar.
+        </p>
+
+        <p>Lorem ipsum dolor sit <strong>amet</strong>, consectetur adipiscing elit. Vestibulum vehicula suscipit nulla.
+            Quisque vitae purus auctor, cursus odio nec, tempor justo. In mollis, justo ultricies faucibus
+            <em>facilisis</em>, tortor nulla viverra nulla, a vestibulum nisl nulla sit amet urna. Etiam a lacus arcu.
+            Nullam finibus convallis felis. Nunc varius sapien id velit iaculis, sed lacinia leo venenatis. Nulla et
+            tincidunt augue, quis molestie eros. Quisque porttitor sagittis dolor, iaculis condimentum ex varius eu.
+            Aenean tristique semper mauris, ut interdum sapien consectetur ac. <a href="#" title="">Donec vulputate</a>
+            metus ac lacus pellentesque, eget condimentum ligula lacinia. Aliquam nec sapien tempus, volutpat erat quis,
+            sollicitudin ante. Vestibulum vitae commodo eros. Aliquam consequat erat sit amet enim sollicitudin
+            pulvinar.
+        </p>
+
+        <p>&nbsp;</p>
+
+        <table class="arlista">
+            <thead>
+                <tr>
+                    <th>Termék</th>
+                    <th>Egységár</th>
+                    <th>Darabszám</th>
+                    <th>Összesen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="paratlan">
+                    <td>Termék 1</td>
+                    <td>49.99 <span class="euros">&euro;</span></td>
+                    <td>10</td>
+                    <td>499.00 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paros">
+                    <td>Termék 2</td>
+                    <td>25.20 <span class="euros">&euro;</span></td>
+                    <td>5</td>
+                    <td>126.00 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paratlan">
+                    <td>Termék 3</td>
+                    <td>15.75 <span class="euros">&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paros">
+                    <td>Termék 4</td>
+                    <td>15.75 <span class="euros">&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paratlan">
+                    <td>Termék 5</td>
+                    <td>15.75 <span class="euros">&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paros">
+                    <td>Termék 6</td>
+                    <td>15.75 <span class="euros">&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span class="euros">&euro;</span></td>
+                </tr>
+                <tr class="paratlan">
+                    <td>Termék 7</td>
+                    <td>15.75 <span class="euros">&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span class="euros">&euro;</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Termék</th>
+                    <th>Egységár</th>
+                    <th>Darabszám</th>
+                    <th>Összesen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Termék 1</td>
+                    <td>49.99 <span>&euro;</span></td>
+                    <td>10</td>
+                    <td>499.00 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 2</td>
+                    <td>25.20 <span>&euro;</span></td>
+                    <td>5</td>
+                    <td>126.00 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 3</td>
+                    <td>15.75 <span>&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 4</td>
+                    <td>15.75 <span>&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 5</td>
+                    <td>15.75 <span>&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 6</td>
+                    <td>15.75 <span>&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span>&euro;</span></td>
+                </tr>
+                <tr>
+                    <td>Termék 7</td>
+                    <td>15.75 <span>&euro;</span></td>
+                    <td>21</td>
+                    <td>330.75 <span>&euro;</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+    </main>
+
+    <footer>
+
+        <img class="macsek" src="https://static.toiimg.com/photo/msid-67586673/67586673.jpg" alt="macsek"
+            style="width: 1000px; margin: 0 auto -380px auto;">
+
+    </footer>
+</body>
+
+</html>
