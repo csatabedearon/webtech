@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #c0bab6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu {
+    background-color: #232323;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #c0bab6;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+.header {
+    background-color: #333333;
+    color: #c0bab6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.title-container h1,
+.title-container h2 {
+    margin: 10px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content img {
+    width: 100%;
+    padding: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-row figure {
+    margin-bottom: 20px;
+    width: 33.33%;
+}
+
+.image-row img {
+    width: 100%;
+}
+
+.image-row figcaption {
+    text-align: left;
+    font-style: italic;
+}
+.image-row figcaption a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #FF9900;
+}
+.text-with-image{
+    display: flex; /* Ensures the text and image are spaced apart */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-evenly; /* Spacing between the text and image */
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+.text-with-image img{
+    width: auto;
+}
+.text-with-image a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #FF9900;
+}
