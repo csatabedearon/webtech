@@ -1,0 +1,71 @@
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.page
+{
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bc
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.bc.center { text-align: center; }
+a.button
+{
+    height: 40px;
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #83b1fc;
+    border-radius: 7px;
+    font-size: 20px;
+    color: #000000;
+    line-height: 40px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+a.button:hover
+{
+    background-color: #35568c;
+    color: #FFFFFF;
+}
+.bc img:hover {
+    transform: scale(1.1);
+}
+.bc p { float: left; }
+.bc img
+{
+    width: 100px;
+    float: left;
+    transition: transform 0.3s ease;
+}
+.anim
+{
+    height: 150px;
+    position: relative;
+}
+.anim .box
+{
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 2px solid #A00000;
+}
+.anim input[type="button"]
+{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+}
