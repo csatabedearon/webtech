@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel API Listázó</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* CSS stílusok ide */
+        #filters {
+            margin-bottom: 20px;
+        }
+        #filters label {
+            margin-right: 10px;
+        }
+        #hotels-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .hotel {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+        }
+        .hotel img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Listázó</h1>
+    <div id="filters">
+        <label for="hotelName">Szűrés hotelt neve alapján:</label>
+        <input type="text" id="hotelName" placeholder="Pl. Aviva Beach Resort">
+        <br>
+        <label for="minStars">Minimális csillag:</label>
+        <input type="number" id="minStars" min="1" max="5" value="1">
+        <label for="maxStars">Maximális csillag:</label>
+        <input type="number" id="maxStars" min="1" max="5" value="5">
+        <br>
+        <label for="minRating">Minimális értékelés:</label>
+        <input type="number" id="minRating" min="0" max="10" step="0.1" value="0">
+        <label for="maxRating">Maximális értékelés:</label>
+        <input type="number" id="maxRating" min="0" max="10" step="0.1" value="10">
+        <br>
+        <label for="minPrice">Minimális ár:</label>
+        <input type="number" id="minPrice" min="0" step="100" value="0">
+        <label for="maxPrice">Maximális ár:</label>
+        <input type="number" id="maxPrice" min="0" step="100" value="10000">
+        <br>
+        <button onclick="listHotels()">Szűrés</button>
+    </div>
+    <div id="hotels-container"></div>
+
+    <script>
+        function listHotels() {
+            var filterName = $('#hotelName').val();
+            var minStars = $('#minStars').val();
+            var maxStars = $('#maxStars').val();
+            var minRating = $('#minRating').val();
+            var maxRating = $('#maxRating').val();
+            var minPrice = $('#minPrice').val();
+            var maxPrice = $('#maxPrice').val();
+            var apiUrl = 'https://students.csik.sapientia.ro/~student/webtech/hotelapi.php';
+
+            // AJAX hívás
+            $.ajax({
+                method: "GET",
+                url: apiUrl,
+                data: {
+                    name: filterName,
+                    minstars: minStars,
+                    maxstars: maxStars,
+                    minrating: minRating,
+                    maxrating: maxRating,
+                    minprice: minPrice,
+                    maxprice: maxPrice,
+                    pritty: ''
+                }
+            })
+            .done(function( hotels ) {
+                console.log( "Szerver által visszaadott hotelek:", hotels );
+                displayHotels(hotels);
+            });
+        }
+
+        function displayHotels(hotels) {
+            var container = $('#hotels-container');
+            container.empty(); // Korábbi hotelek törlése
+
+            hotels.forEach(function(hotel) {
+                var hotelElement = '<div class="hotel">';
+                hotelElement += '<h3>' + hotel.name + '</h3>';
+                hotelElement += '<p>' + hotel.stars + ' csillag - ' + hotel.rating + ' értékelés</p>';
+                hotelElement += '<p>Ár: ' + hotel.price + '</p>';
+                hotelElement += '<p>Értékelések száma: ' + hotel.nr_rewviews + '</p>';
+                hotelElement += '<img src="https://students.csik.sapientia.ro/~student/webtech/' + hotel.thumb + '" alt="' + hotel.name + '">';
+                hotelElement += '</div>';
+
+                container.append(hotelElement);
+            });
+        }
+    </script>
+</body>
+</html>
