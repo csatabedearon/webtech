@@ -1,7 +1,8 @@
-*{
+* {
 
     box-sizing: border-box;
 }
+
 body {
     background-color: #1a1a1a;
     color: #fff;
@@ -15,7 +16,8 @@ body {
     margin: 0 auto;
 }
 
-.operators-container {
+.operators-container,
+.maps-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,15 +31,29 @@ body {
     border: 2px solid orange;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    width: 300px;
+    width: 320px;
 }
 
-.operator:hover {
+.map {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width:auto;
+}
+
+.operator:hover,
+.map:hover {
     transform: scale(1.1);
 }
 
-.operator img {
+.operator img{
     height: 500px;
+}
+.map img{
+    width: 650px;
 }
 
 #title {
@@ -47,38 +63,43 @@ body {
     padding: 10px;
     color: orange
 }
-ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    background-color: #1a1a1a; 
-    width: 100%; 
-    text-align: center; 
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #1a1a1a;
+    width: 100%;
+    text-align: center;
     margin: 50px 0px 30px 0px;
 }
 
-ul li {
-    display: inline-block; 
+nav ul li {
+    display: inline-block;
     margin-right: 20px;
 }
 
-ul li a {
-    text-decoration: none; 
-    color: white; 
+nav ul li a {
+    text-decoration: none;
+    color: white;
     font-size: 20px;
     padding: 10px 20px;
     border: 2px solid orange;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    
+
 }
 
-ul li a:hover {
-    background-color: orange; 
-    color: black; 
+nav ul li a:hover {
+    background-color: orange;
+    color: black;
 }
 
 .bemutato {
+    flex-direction: column;
     text-align: left;
-    
+}
+
+.bemutato p {
+    font-size: 18px;
 }
