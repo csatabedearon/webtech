@@ -96,10 +96,30 @@ nav ul li a:hover {
 }
 
 .bemutato {
-    flex-direction: column;
     text-align: left;
 }
 
 .bemutato p {
+    font-size: 18px;
+}
+
+.cover-text-content {
+    float: left;
+    width: 45%; 
+    margin: 0 20px 20px 0; 
+    
+}
+.cover-right {
+    float: right;
+    width: 50%; 
+    margin: 0 0 20px 20px; 
+    
+}
+
+.cover-right img {
+    height: auto;
+}
+.operator-bemutato {
+    text-align: left;
     font-size: 18px;
 }
