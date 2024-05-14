@@ -1,0 +1,43 @@
+*{
+
+    box-sizing: border-box;
+}
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.operators-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.operator {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.operator:hover {
+    transform: scale(1.1);
+}
+
+.operator img {
+    height: 500px;
+}
+
+#title {
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    color: orange
+}
