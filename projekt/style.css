@@ -10,6 +10,11 @@ body {
     text-align: center;
 }
 
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .operators-container {
     display: flex;
     justify-content: center;
@@ -49,6 +54,7 @@ ul {
     background-color: #1a1a1a; 
     width: 100%; 
     text-align: center; 
+    margin: 50px 0px 30px 0px;
 }
 
 ul li {
@@ -70,4 +76,9 @@ ul li a {
 ul li a:hover {
     background-color: orange; 
     color: black; 
+}
+
+.bemutato {
+    text-align: left;
+    
 }
