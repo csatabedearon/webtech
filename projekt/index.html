@@ -12,16 +12,21 @@
     <div class="container">
         <h1 id="title">Rainbow Six Siege Showcase</h1>
         <nav>
-            <ul>
+            <a class="hamburger-menu" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="orange">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg></a>
+            <ul id="navbar">
                 <li><a href="index.html">A játékról röviden</a></li>
                 <li><a href="operators.html">Operátorok</a></li>
-                <li><a href="maps.html">Mapok</li></a></li>
+                <li><a href="maps.html">Mapok</a></li>
                 <li><a href="guns.html">Fegyverek</a></li>
             </ul>
         </nav>
         <div class="bemutato">
-            <h2>Rainbow six siege rövid bemutatása: </h2>
             <div class="cover-text-content">
+                <h2>Rainbow six siege rövid bemutatása: </h2>
+
                 <p>A Tom Clancy's Rainbow Six Siege a Tom Clancy's Rainbow Six franchise tizenhatodik része, amelyet a
                     Ubisoft Montreal fejlesztett és a Ubisoft Entertainment adott ki. A törölt Tom Clancy's Rainbow Six
                     utódjának tekinthető: Hazafiak című sorozat folytatásaként.
@@ -42,12 +47,13 @@
                 </p>
             </div>
             <div class="cover-image-container">
-                <img src="img\cover\cover.jpg" alt="R6 cover photo" class="cover-right">
+                <img src="img\cover\cover.jpg" alt="R6 cover photo">
             </div>
         </div>
         <div class="operator-bemutato">
-            <h2>A játszható karakterek, avagy az operátorok:</h2>
             <div class="operator-bemutato-text">
+                <h2>A játszható karakterek, avagy az operátorok:</h2>
+
                 <p>Az operátorok játszható karakterek a Tom Clancy's Rainbow Six Siege játékban. Jelenleg 71 játszható
                     operátor van (kivéve az újoncokat), akik mind a játék 32 CTU-jának valamelyikéből származnak, és 2
                     pozícióba vannak besorolva: Támadók (ATK) és védők (DEF). </p>
@@ -69,10 +75,13 @@
                         megfigyelésblokkolók.</li>
                     <li>Általános kütyük: CCTV-k, barikádok, erősítés.</li>
                 </ul>
-                <a href="https://rainbowsix.fandom.com/wiki/Operators_(Siege)" target="_blank" style="color: orange;">Az
-                    összes operátor itt található meg</a>
+            </div>
+            <div class="operator-bemutato-image">
+                <img src="img\cover\attacker_defender.avif"></img>
             </div>
         </div>
+        <a href="https://rainbowsix.fandom.com/wiki/Operators_(Siege)" target="_blank" style="color: orange;">=>Az
+            összes operátor itt található meg<= </a>
     </div>
     <script src="script.js"></script>
 </body>

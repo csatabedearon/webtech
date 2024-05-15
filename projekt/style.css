@@ -1,9 +1,12 @@
 * {
 
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    min-height: 100vh;
     background-color: #1a1a1a;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -41,7 +44,7 @@ body {
     border: 2px solid orange;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    width:auto;
+    width: auto;
 }
 
 .operator:hover,
@@ -49,10 +52,11 @@ body {
     transform: scale(1.1);
 }
 
-.operator img{
+.operator img {
     height: 500px;
 }
-.map img{
+
+.map img {
     width: 650px;
 }
 
@@ -96,30 +100,126 @@ nav ul li a:hover {
 }
 
 .bemutato {
+    display: flex;
     text-align: left;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-size: 18px;
 }
 
-.bemutato p {
-    font-size: 18px;
+.bemutato h2,
+p {
+    margin-bottom: 15px;
+}
+
+.operator-bemutato h2,
+p {
+    margin-bottom: 15px;
+}
+
+.operator-bemutato h3 {
+    margin-top: 15px;
+}
+
+.operator-bemutato li {
+    margin-bottom: 5px;
 }
 
 .cover-text-content {
-    float: left;
-    width: 45%; 
-    margin: 0 20px 20px 0; 
-    
-}
-.cover-right {
-    float: right;
-    width: 50%; 
-    margin: 0 0 20px 20px; 
-    
+    flex: 1;
 }
 
-.cover-right img {
-    height: auto;
+.cover-image-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
 }
+
+.cover-image-container img {
+
+    width: 100%;
+}
+
+.operator-bemutato-image {
+    display: flex;
+    align-items: center;
+}
+
+.operator-bemutato-image img {
+    flex: 1;
+    width: 100%;
+}
+
 .operator-bemutato {
+    display: flex;
     text-align: left;
     font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: orange;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.hamburger-menu svg {
+    color: orange;
+}
+
+@media screen and (max-width: 716px) {
+    nav ul li {
+        margin-bottom: 40px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width:982px) {
+    .bemutato {
+        flex-direction: column;
+    }
+
+    .cover-image-container {
+        width: 100%;
+    }
+
+    .operator-bemutato {
+        flex-direction: column;
+    }
+
+    .operator-bemutato-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+        width: 100%;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    #navbar li {
+        display: block;
+    }
+
+}
+
+
+@media (min-width: 601px) {
+    #navbar {
+        display: block;
+    }
 }
