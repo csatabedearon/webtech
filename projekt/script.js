@@ -6,3 +6,4 @@ function toggleMenu() {
         navbar.style.display = "block";
     }
 }
+

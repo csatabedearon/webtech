@@ -46,6 +46,9 @@ body {
     transition: transform 0.3s ease;
     width: auto;
 }
+.map h2{
+    margin-bottom: 10px;
+}
 
 .operator:hover,
 .map:hover {
@@ -57,7 +60,8 @@ body {
 }
 
 .map img {
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
 }
 
 #title {
@@ -66,6 +70,24 @@ body {
     border-radius: 10px;
     padding: 10px;
     color: orange
+}
+.all-operator-link{
+    margin-bottom: 20px;
+}
+.all-operator-link a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 166, 0);
+    font-size: large;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    transition: color 0.3s ease-in-out;
+}
+.all-operator-link a:hover{
+    color: yellow;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
 }
 
 nav ul {
@@ -136,8 +158,8 @@ p {
 }
 
 .cover-image-container img {
-
     width: 100%;
+    margin-left: 25px;
 }
 
 .operator-bemutato-image {
@@ -146,7 +168,7 @@ p {
 }
 
 .operator-bemutato-image img {
-    flex: 1;
+    margin-left: 25px;
     width: 100%;
 }
 
@@ -170,6 +192,8 @@ p {
 .hamburger-menu svg {
     color: orange;
 }
+
+
 
 @media screen and (max-width: 716px) {
     nav ul li {
