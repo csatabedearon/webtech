@@ -12,6 +12,7 @@ body {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .menu {
@@ -64,17 +65,21 @@ body {
 
 .content img {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .image-row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .image-row figure {
     margin-bottom: 20px;
-    width: 33.33%;
+    width: 100%;
+    max-width: 290px;
+    flex: 1 1 calc(33.33% - 20px);
+    box-sizing: border-box;
 }
 
 .image-row img {
@@ -85,27 +90,106 @@ body {
     text-align: left;
     font-style: italic;
 }
-.image-row figcaption a{
+
+.image-row figcaption a {
     display: block;
     text-align: right;
     text-decoration: none;
     color: #FF9900;
 }
-.text-with-image{
-    display: flex; /* Ensures the text and image are spaced apart */
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: space-evenly; /* Spacing between the text and image */
-}
-.text-container{
+
+.text-with-image {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
-.text-with-image img{
-    width: auto;
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-.text-with-image a{
+
+.text-with-image img {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px 0;
+}
+
+.text-with-image a {
     display: block;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     color: #FF9900;
+}
+
+.footer {
+    background-color: #232323;
+    color: #c0bab6;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.link-block {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 10px;
+}
+
+.link-block h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.link-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-block ul li {
+    margin-bottom: 10px;
+}
+
+.link-block ul li a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    .text-with-image {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .text-container {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .text-with-image img {
+        margin: 0;
+    }
+    
 }
