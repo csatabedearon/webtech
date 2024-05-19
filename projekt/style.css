@@ -263,16 +263,77 @@ tbody tr:hover {
     background-color: #777;
 }
 
-.explanation{
+.explanation {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 716px) {
+.login-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.login-container h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: white;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff8c00;
+}
+
+.register-text {
+    margin-bottom: 20px;
+}
+
+.register-text a {
+    color: orange;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 911px) {
     nav ul li {
         margin-bottom: 40px;
+
     }
 
-    nav ul li:last-child {
+    #navbar {
         margin-bottom: 0px;
     }
 }

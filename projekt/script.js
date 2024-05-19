@@ -7,7 +7,8 @@ function toggleMenu() {
     }
 }
 
-//operatorok megnyitasa dinamikus linkel
+
+//operatorok es mapok megnyitasa dinamikus linkel
 const baseUrl = 'https://rainbowsix.fandom.com/wiki/';
 
 const operators = document.querySelectorAll('.operator');
@@ -44,3 +45,31 @@ function showTable(tableId) {
         smgTable.style.display = 'table';
     }
 }
+
+
+//urlap ellenorzes
+function validateForm() {
+    const email = document.getElementById('email').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const eula = document.getElementById('eula').checked;
+
+    if (email === '' || username === '' || password === '' || confirmPassword === '' || !eula) {
+        alert('Kérjük, töltse ki az összes mezőt és fogadja el a feltételeket.');
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        alert('A jelszavak nem egyeznek.');
+        return false;
+    }
+
+    return true;
+}
+
+document.querySelector('form').addEventListener('submit', function (event) {
+    if (!validateForm()) {
+        event.preventDefault();
+    }
+});

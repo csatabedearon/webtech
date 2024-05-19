@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Six Siege</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Rainbow Six Siege Showcase</h1>
+        <nav>
+            <a class="hamburger-menu" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="orange">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg></a>
+            <ul id="navbar">
+                <li><a href="index.html">A játékról röviden</a></li>
+                <li><a href="operators.html">Operátorok</a></li>
+                <li><a href="maps.html">Mapok</a></li>
+                <li><a href="guns.html">Fegyverek</a></li>
+                <li><a href="login.html">Bejelentkezés</a></li>
+            </ul>
+        </nav>
+        <div class="login-container">
+            <h2>Regisztráció</h2>
+
+            <form>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="username">Felhasznónev:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Jelszó:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Jelszó újra:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="eula" name="eula" required>
+                    <label for="eula">Elfogadom a <a href="eula.html" style="color: orange;">Felhasználói
+                        Szerződést</a></label>
+                </div>
+                <div class="register-text">Nincs még fiókod? <a href="register.html">Regisztrálj itt!</a></div>
+                <button type="submit">Bejelentkezés</button>
+            </form>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
