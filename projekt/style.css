@@ -46,7 +46,8 @@ body {
     transition: transform 0.3s ease;
     width: auto;
 }
-.map h2{
+
+.map h2 {
     margin-bottom: 10px;
 }
 
@@ -71,10 +72,12 @@ body {
     padding: 10px;
     color: orange
 }
-.all-operator-link{
+
+.all-operator-link {
     margin-bottom: 20px;
 }
-.all-operator-link a{
+
+.all-operator-link a {
     display: inline-block;
     text-decoration: none;
     color: rgb(255, 166, 0);
@@ -84,7 +87,8 @@ body {
     border-radius: 10px;
     transition: color 0.3s ease-in-out;
 }
-.all-operator-link a:hover{
+
+.all-operator-link a:hover {
     color: yellow;
     transition: color 0.3s ease-in-out;
     text-decoration: underline;
