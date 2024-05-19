@@ -31,3 +31,16 @@ maps.forEach(map => {
         window.open(url, '_blank');
     });
 });
+
+function showTable(tableId) {
+    var arLmgTable = document.getElementById('ar-lmg-table');
+    var smgTable = document.getElementById('smg-table');
+
+    if (tableId === 'ar-lmg') {
+        arLmgTable.style.display = 'table';
+        smgTable.style.display = 'none';
+    } else if (tableId === 'smg') {
+        arLmgTable.style.display = 'none';
+        smgTable.style.display = 'table';
+    }
+}
